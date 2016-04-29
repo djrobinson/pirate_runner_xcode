@@ -22,11 +22,14 @@ platform.HighScores.prototype = {
                              platform.game.add.text(480, 50, "High Scores", {font: "60px Palatino Linotype", fill: 'white'});
                              var height = 150
                              for (var i = 0; i < iterArr.length; i++){
+                             if (iterArr[i].name === 'null'){
+                                iterArr[i].name = "Guest";
+                             }
                                 console.log(iterArr[i]);
                                 platform.game.add.text(450, height, iterArr[i].name + " : " + iterArr[i].score, {font: "45px Palatino Linotype", fill: 'white'});
                              height += 50;
                              }
-                             platform.game.add.text(70, 530, 'Back to Main',{font: "32px Palatino Linotype", fill: 'white'})
+                             platform.game.add.text(90, 530, 'Back to Main',{font: "32px Palatino Linotype", fill: 'white'})
                              }
                              });
         
@@ -34,7 +37,7 @@ platform.HighScores.prototype = {
         xhr.setRequestHeader("cache-control", "no-cache");
         
         xhr.send(data);
-        this.game.add.button(100,600, 'box', this.backToMain, this, 2, 1, 0);
+        this.game.add.button(30,450, 'home-button', this.backToMain, this, 2, 1, 0);
 
     },
     backToMain: function(){

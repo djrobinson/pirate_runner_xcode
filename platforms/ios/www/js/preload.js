@@ -16,6 +16,7 @@ platform.Preload.prototype = {
         this.load.image('menu-back', 'assets/pirate_entry.png');
         this.load.image('game-over', 'assets/game_over.jpg');
         this.load.image('high-scores', 'assets/high-scores.jpg');
+        this.load.image('home-button', 'assets/home-button.png');
       },
     create: function() {
 
